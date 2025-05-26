@@ -35,8 +35,8 @@ class WhatsappMessage:
 class WhatsappParser:
     def __init__(self,format="android"):
         self.format = format.lower()
-        if self.format not in ("android","ios"):
-            raise ValueError("supported format type are 'android' or 'ios'")
+        if self.format not in ("android"):
+            raise ValueError("supported format type are 'android'")
         
     def is_header(self,line):
         if self.format == "android":
